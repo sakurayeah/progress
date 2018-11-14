@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.J-wrap {
+  position: relative;
+  width: 100%;
+}
+.circle-progress {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+}
+.progress-wrap {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  clip: rect(0px, 100px, 100px, 50px);
+  animation: closeWrapper 0s 3s linear 1;
+  animation-fill-mode: forwards;
+  -webkit-animation: closeWrapper 0s 3s linear 1;
+  -webkit-animation-fill-mode: forwards;
+}
+.progress-wrap .circle {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 10px solid black;
+  border-radius: 100%;
+  clip: rect(0px, 50px, 100px, 0px);
+}
+.progress-wrap .left {
+  animation: leftSpin 6s 0s linear 1;
+  -webkit-animation: leftSpin 6s 0s linear 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+.progress-wrap .right {
+  animation: rightSpin 3s 0s linear 1;
+  animation-fill-mode: forwards;
+  -webkit-animation: rightSpin 3s 0s linear 1;
+  -webkit-animation-fill-mode: forwards;
+}
+.progress-wrap .circle-center {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background: #fff;
+}
+@keyframes closeWrapper {
+  to {
+    clip: rect(auto, auto, auto, auto);
+  }
+}
+@-webkit-keyframes closeWrapper {
+  to {
+    clip: rect(auto, auto, auto, auto);
+  }
+}
+@keyframes leftSpin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes leftSpin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes rightSpin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+  }
+}
+@-webkit-keyframes rightSpin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+  }
+}
+.progress-canvas {
+  background: black;
+}
+.progress-canvas2 {
+  background: black;
+}
+.progress-canvas3 {
+  background: black;
+}
